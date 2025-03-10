@@ -1,0 +1,22 @@
+<style>
+div {
+    color: red;
+    font-size: 18px;
+}
+</style>
+
+<markup>
+<div>Nested Component</div>
+</markup>
+
+<script>
+export function render(context, uuid, element) {
+    // Example of using the context and UUID
+    const appMessage = context.getGlobalState('appMessage');
+    const componentState = context.getComponentState(uuid);
+    console.log(appMessage); // Output: Hello from App component
+    console.log(componentState); // Output: { message: 'App component state' }
+
+    // Any additional logic for rendering the component can go here
+}
+</script>

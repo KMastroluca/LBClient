@@ -1,0 +1,30 @@
+<style>
+div {
+    color: blue;
+    font-size: 24px;
+}
+</style>
+
+<markup>
+<div>
+    Hello, World!
+    <div data-component="NestedComponent"></div>
+</div>
+</markup>
+
+<script>
+export function render(context, uuid, element) {
+    // Example of using the context and UUID
+    context.setGlobalState('appMessage', 'Hello from App component');
+    context.setComponentState(uuid, { message: 'App component state' });
+
+    const componentState = context.getComponentState(uuid);
+
+    // Example of reactive state
+    setTimeout(() => {
+        componentState.message = 'Updated App component state';
+    }, 2000);
+
+    // Any additional logic for rendering the component can go here
+}
+</script>

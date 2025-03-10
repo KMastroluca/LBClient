@@ -1,0 +1,43 @@
+{
+    "scopeName": "source.component",
+    "patterns": [
+        {
+            "include": "#style"
+        },
+        {
+            "include": "#markup"
+        },
+        {
+            "include": "#script"
+        }
+    ],
+    "repository": {
+        "style": {
+            "begin": "<style>",
+            "end": "</style>",
+            "patterns": [
+                {
+                    "include": "source.css"
+                }
+            ]
+        },
+        "markup": {
+            "begin": "<markup>",
+            "end": "</markup>",
+            "patterns": [
+                {
+                    "include": "text.html.basic"
+                }
+            ]
+        },
+        "script": {
+            "begin": "<script>",
+            "end": "</script>",
+            "patterns": [
+                {
+                    "include": "source.js"
+                }
+            ]
+        }
+    }
+}
